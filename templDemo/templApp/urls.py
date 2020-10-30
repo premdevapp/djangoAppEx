@@ -17,5 +17,6 @@ from django.urls import path
 from templApp import views
 
 urlpatterns = [
-    path('', views.renderTemplate)
+    path('', views.renderTemplate),
+    path('employee/', views.renderEmp)
 ]
