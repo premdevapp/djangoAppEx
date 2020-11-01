@@ -16,3 +16,18 @@ def createStudent(request):
             form.save()
         return redirect('/fbvapp/')
     return render(request, 'fbvApp/create.html', {'form': form})
+
+def deleteStudent(request, id):
+    student = Student.objects.get(id=id)
+    student.delete()
+    return redirect('/fbvapp/')
+
+def updateStudent(request, id):
+    student = Student.objects.get(id=id)
+    form = StudentForm(instance=student)
+    if request.method == 'POST':
+        form = StudentForm(request.POST, instance=student)
+        if form.is_valid():
+            form.save()
+        return redirect('/fbvapp/')
+    return render(request, 'fbvApp/update.html', {'form': form})

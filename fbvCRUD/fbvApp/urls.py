@@ -19,5 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.getStudents),
-    path('create/', views.createStudent)
+    path('create/', views.createStudent),
+    path('delete/<int:id>', views.deleteStudent),
+    path('update/<int:id>', views.updateStudent),
 ]

@@ -21,6 +21,8 @@
           <td>{{ student.firstName }}</td>
           <td>{{ student.lastName }}</td>
           <td>{{ student.testScore }}</td>
+          <td><a href="delete/{{student.id}}">Remove</a></td>
+          <td><a href="update/{{student.id}}">Edit</a></td>
         </tr>
         {% endfor %}
       </tbody>
