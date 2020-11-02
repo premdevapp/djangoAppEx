@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Detail</title>
-  </head>
-  <body>
-    <h1>Student Detail</h1>
-    <ol>
-      <h3>
-        <li>First Name: {{student.firstName}}</li>
-      </h3>
-      <h3>
-        <li>First Name: {{student.lastName}}</li>
-      </h3>
-      <h3>
-        <li>First Name: {{student.testScore}}</li>
-      </h3>
-      <h3>
-        <li><a href="/cvb/delete/{{student.id}}">Remove</a></li>
-      </h3>
-      <h3>
-        <li><a href="/cvb/update/{{student.id}}">Edit</a></li>
-      </h3>
-    </ol>
-  </body>
-</html>
+{% extends 'cvbapp/base.html' %} {% block body_block %}
+<h1>Student Detail</h1>
+<ol>
+  <h3>
+    <li>First Name: {{student.firstName}}</li>
+  </h3>
+  <h3>
+    <li>First Name: {{student.lastName}}</li>
+  </h3>
+  <h3>
+    <li>First Name: {{student.testScore}}</li>
+  </h3>
+  <h3>
+    <li><a href="/cvb/delete/{{student.id}}">Remove</a></li>
+  </h3>
+  <h3>
+    <li><a href="/cvb/update/{{student.id}}">Edit</a></li>
+  </h3>
+</ol>
+{% endblock %}
