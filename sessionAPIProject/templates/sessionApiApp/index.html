@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Shoping Cart</h1>
+    <a href="/addItem">Add Item</a>
+    <a href="/displayItems">Display Items</a>
+    <br />
+    <strong>
+      Session expiry time in seconds: {{request.session.get_expiry_age}}</strong
+    >
+    <strong>
+      Session expiry time in days: {{ request.session.get_expiry_date }}</strong
+    >
+  </body>
+</html>
