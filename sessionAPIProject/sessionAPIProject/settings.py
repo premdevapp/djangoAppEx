@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'sessionApiApp.middleware.MiddlewareLifeCycle',
+    'sessionApiApp.middleware.ExceptionHandlingMiddleware',
 ]
 
 ROOT_URLCONF = 'sessionAPIProject.urls'
